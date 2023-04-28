@@ -1,0 +1,49 @@
+—------------------------------------------------------------------------------------------------------------------------
+### INICIO ###
+nombre-generico-1 | WARRIOR | 100 de vida vs nombre-generico-2 | WARRIOR | 143 de vida
+### BATALLA ###
+Turno 1
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 128
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 92
+Turno 2
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 113
+nombre-generico-2 ataca con Sword Cleave… Falla!. La vida del nombre-generico-1 se mantiene en 92
+Turno 3
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 98
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 84
+Turno 4
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 83
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 76
+Turno 5
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 68
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 68
+Turno 6
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 53
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 60
+Turno 7
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 38
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 52
+Turno 8
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 23
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 44
+Turno 9
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en 8
+nombre-generico-2 ataca con Sword Cleave… Da en el blanco!. La vida del nombre-generico-1 queda en 36
+Turno 10
+
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en -7
+nombre-generico-1 ataca con Fist Smash… Da en el blanco!. La vida del nombre-generico-2 queda en -7
+### RESUMEN ###
+nombre-generico-2 gana la batalla!
+El nombre-generico-2 falló 1 veces su ataque
+El nombre-generico-1 falló 0 veces su ataque
+—------------------------------------------------------------------------------------------------------------------------

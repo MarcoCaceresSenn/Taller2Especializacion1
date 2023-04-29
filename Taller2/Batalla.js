@@ -10,6 +10,7 @@ function crearPersonaje(name, clase){
         secondAttack: asignarAtaque(clase),
         hp: asignarVida(),
         speed: asignarVelocidad(),
+        fallos: 0
     }
 }
 var personaje1 = crearPersonaje("nombre-generico-1", asignarClase());
@@ -112,8 +113,6 @@ El Personaje_2 falló N_FALLOS_2 veces su ataque
 function batalla(personaje1, personaje2){
     let turnoJugador = [];
     let ganador = null;
-    var fallosJugador1 = 0;
-    var fallosJugador2 = 0;
     let ronda = 1;
     let logs = inicio(personaje1, personaje2); 
     var lineaBatalla = "\n### BATALLA ###";
@@ -121,10 +120,10 @@ function batalla(personaje1, personaje2){
     while(ganador === null){
         logs += "\nTurno " + ronda + "\n";
         turnoJugador = asignarTurno(personaje1, personaje2);
-        let cantidadVida = turno(turnoJugador[0], turnoJugador[1], ronda, fallosJugador1, fallosJugador2);
+        let cantidadVida = turno(turnoJugador[0], turnoJugador[1], ronda);
         let cantidadFallos = [cantidadVida[3], cantidadVida[4]];
-        fallosJugador1 += cantidadFallos[0];
-        fallosJugador2 += cantidadFallos[1];
+        personaje1.fallos += cantidadFallos[0];
+        personaje2.fallos += cantidadFallos[1];
         /*------|cantidadVida tiene [GANADOR, PERDEDOR, LOGS, fallos1, fallos2]|------*/
         if(cantidadVida[1].hp <= 0 || cantidadVida[0].hp <= 0){
             ganador = turnoJugador[0];
@@ -133,7 +132,7 @@ function batalla(personaje1, personaje2){
         logs += cantidadVida[2];
         ronda++;
     }
-    logs += resumen(turnoJugador[0], turnoJugador[1], fallosJugador1, fallosJugador2);
+    logs += resumen(turnoJugador[0], turnoJugador[1], personaje1.fallos, personaje2.fallos);
     generateFileLog(logs, "LOGS_DE_BATALLA.txt")    
 }
 /*--------|INICIO|-------*/
@@ -169,13 +168,13 @@ function turno(personaje1, personaje2, turno){
         personaje1.hp = personaje1.hp - daño;
         var lineaAcierto2 = (personaje2.name + " ataca con " + ataquePersonaje2.name + "… Da en el blanco!. La vida del " + personaje1.name + " queda en " + personaje1.hp);
         logs += "\n" + lineaAcierto2;
-        return [personaje1, personaje2, logs];
+        return [personaje1, personaje2, logs,fallo1, fallo2];
     }
     else if(personaje2.hp > 0){ // si falla y tiene vida no ataca personaje 2
         var lineaFallo2 = (personaje2.name + " ataca con " + ataquePersonaje2.name + "… Falla!. La vida del " + personaje1.name + " se mantiene en " + personaje1.hp);
         logs += "\n" + lineaFallo2;
         fallo2 = 1;
-        return [personaje1, personaje2, logs];
+        return [personaje1, personaje2, logs, fallo1, fallo2];
     }
     if(personaje1.hp <= 0){ // si el personaje 1 se queda sin vida se asigna el dos como ganador y se retorna en orden de ganador y perdedor junto con los logs y los fallos
         let ganador = personaje2;
